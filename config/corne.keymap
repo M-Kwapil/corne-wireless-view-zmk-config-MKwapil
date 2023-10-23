@@ -84,29 +84,29 @@
 // -----------------------------------------------------------------------------------------
 // |      |  !  |  @  |  #  |  $  |  %  |   |  /  |  +  |  [  |  ]  | "|" |      |
 // |      |  ^  |     |Home | End |  ;  |   |  *  |  -  |  (  |  )  |     |  `   |
-// |      |     |     | PgUp| PgDn|     |   |  &  |  =  |  {  |  }  |  \  |  ~   |
+// |LShift|     |     | PgUp| PgDn|     |   |  &  |  =  |  {  |  }  |  \  |  ~   |
 //                    |     |     |     |   |     |     | LSHFT|
                         label = "Symbol";
                         bindings = <
-   &none  &kp EXCL   &kp AT  &kp HASH   &kp DLLR   &kp PRCNT    &kp FSLH         &kp PLUS   &kp LBKT  &kp RBKT  &kp PIPE  &none
-   &none  &kp CARET  &none   &kp HOME   &kp END    &kp SEMI     &kp KP_MULTIPLY  &kp MINUS  &kp LPAR  &kp RPAR  &none     &kp GRAVE
-   &none  &none      &none   &kp PG_UP  &kp PG_DN  &none        &kp AMPS         &kp EQUAL  &kp LBRC  &kp RBRC  &kp BSLH  &kp TILDE
-                    	      &trans     &trans     &trans       &trans           &trans      &kp LSHFT
+   &none      &kp EXCL   &kp AT  &kp HASH   &kp DLLR   &kp PRCNT    &kp FSLH         &kp PLUS   &kp LBKT  &kp RBKT  &kp PIPE  &none
+   &none      &kp CARET  &none   &kp HOME   &kp END    &kp SEMI     &kp KP_MULTIPLY  &kp MINUS  &kp LPAR  &kp RPAR  &none     &kp GRAVE
+   &kp LSHFT  &none      &none   &kp PG_UP  &kp PG_DN  &none        &kp AMPS         &kp EQUAL  &kp LBRC  &kp RBRC  &kp BSLH  &kp TILDE
+                    	      &trans     &trans     &trans       &trans           &trans      &trans
                         >;
                 };
 
                 Navigation_layer {
 // -----------------------------------------------------------------------------------------
-// |VOL UP|Play/pau|     |     |     |     |   |     |        | UP  |     |     |      |
-// |VOL DN|        |     |     |     |ALTab|   |     |   RGT  | DWN | LFT |     |      |
+// |VOL UP|Play/pau|     |     |     |     |   |ALTab|        | UP  |     |     |      |
+// |VOL DN|        |     |     |     |     |   |     |   RGT  | DWN | LFT |     |      |
 // | MUTE |        |     |     |     |     |   |     |        |     |     |     |      |
 //                       |     |     |     |   |     |CTRL_Win|     |
                         label = "Nav";
                         bindings = <
-   &kp C_VOL_UP  &kp C_PP  &none  &none   &none   &none        &none   &none       &kp UP    &none      &none  &none
-   &kp C_VOL_DN  &none     &none  &none   &none   &Alt_Tab     &none   &kp LEFT    &kp DOWN  &kp RIGHT  &none  &none
-   &kp C_MUTE    &none     &none  &none   &none   &none        &none   &none       &none     &none      &none  &none
-                                  &trans  &trans  &trans       &trans  &Ctrl_Wind  &trans
+   &kp C_VOL_UP  &kp C_PP  &none  &none   &none   &none     &Alt_Tab    &none       &kp UP    &none      &none  &none
+   &kp C_VOL_DN  &none     &none  &none   &none   &none     &none       &kp LEFT    &kp DOWN  &kp RIGHT  &none  &none
+   &kp C_MUTE    &none     &none  &none   &none   &none     &none       &none       &none     &none      &none  &none
+                                  &trans  &trans  &trans    &trans      &Ctrl_Wind  &trans
                         >;
                 };
 
