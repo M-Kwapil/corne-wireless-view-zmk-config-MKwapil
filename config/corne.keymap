@@ -21,7 +21,7 @@
                 ;
         };
 
-        EASOP_Comment: EASOP_Cmnt {
+        EASOP_Cmnt: EASOP_Cmnt {
             label = "EASOP_Cmnt";
             compatible = "zmk,behavior-macro";
             wait-ms = <40>;
