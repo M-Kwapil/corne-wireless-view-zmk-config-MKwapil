@@ -44,6 +44,18 @@
                 , <&macro_release &kp LCTRL &kp LGUI>
                 ;
         };
+
+        Login_Pass: Login_Pass {
+            label = "Login_Pass";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LSHFT>
+                , <&macro_tap &kp M>
+                , <&macro_release &kp LSHFT>
+                , <&macro_tap &kp E &kp T &kp R &kp O &kp I &kp D &kp N1 &kp DLLR &kp N0>
+                ;
+        };
     };
 };
 
@@ -118,9 +130,9 @@
 //                    |     |     |     |   |     |     |     |
                         label = "Function";
                         bindings = <
-   &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4           &kp CAPS     &none  &none  &none  &none &kp PSCRN
-   &none      &none        &none        &none        &none        &EASOP_Cmnt            &kp KP_NLCK  &none  &none  &none  &none &kp K_CALC
-   &none      &none        &none        &none        &none        &none                  &none        &none  &none  &none  &none &trans
+   &bt BT_CLR  &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4           &kp CAPS     &none  &none  &none  &none &kp PSCRN
+   &none       &none        &none        &none        &none        &EASOP_Cmnt            &kp KP_NLCK  &none  &none  &none  &none &kp K_CALC
+   &Login_Pass &none        &none        &none        &none        &none                  &none        &none  &none  &none  &none &trans
                           	        &trans       &trans       &trans                 &trans  &trans   &trans
                         >;
                 };
