@@ -53,7 +53,18 @@
                 = <&macro_press &kp LSHFT>
                 , <&macro_tap &kp W>
                 , <&macro_release &kp LSHFT>
-                , <&macro_tap &kp I &kp I &kp T &kp A &kp N &kp K &kp N1 &kp DLLR &kp N0>
+                , <&macro_tap &kp A &kp R &kp N &kp I &kp N &kp G &kp N1 &kp DLLR &kp N0>
+                ;
+        };
+
+        Arw_Fn: Arw_Fn {
+            label = "Arw_Fn";
+            compatible = "zmk,behavior-macro";
+            wait-ms = <40>;
+            tap-ms = <40>;
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp EQUAL &kp GT &kp SPACE>
                 ;
         };
     };
@@ -95,13 +106,13 @@
                 Symbol_layer {
 // -----------------------------------------------------------------------------------------
 // |      |  !  |  @  |  #  |  $  |  %  |   |  /  |  +  |  [  |  ]  | "|" |      |
-// |      |  ^  |     |Home | End |  ;  |   |  *  |  -  |  (  |  )  |     |  `   |
+// |      |  ^  |     |Home | End |  ;  |   |  *  |  -  |  (  |  )  |  => |  `   |
 // |LShift|     |     | PgUp| PgDn|     |   |  &  |  =  |  {  |  }  |  \  |  ~   |
 //                    |     |     |     |   |     |     | LSHFT|
                         label = "Symbol";
                         bindings = <
    &none      &kp EXCL   &kp AT  &kp HASH   &kp DLLR   &kp PRCNT    &kp FSLH         &kp PLUS   &kp LBKT  &kp RBKT  &kp PIPE  &none
-   &none      &kp CARET  &none   &kp HOME   &kp END    &kp SEMI     &kp KP_MULTIPLY  &kp MINUS  &kp LPAR  &kp RPAR  &none     &kp GRAVE
+   &none      &kp CARET  &none   &kp HOME   &kp END    &kp SEMI     &kp KP_MULTIPLY  &kp MINUS  &kp LPAR  &kp RPAR  &Arw_Fn   &kp GRAVE
    &kp LSHFT  &none      &none   &kp PG_UP  &kp PG_DN  &none        &kp AMPS         &kp EQUAL  &kp LBRC  &kp RBRC  &kp BSLH  &kp TILDE
                     	      &trans     &trans     &trans       &trans           &trans      &trans
                         >;
