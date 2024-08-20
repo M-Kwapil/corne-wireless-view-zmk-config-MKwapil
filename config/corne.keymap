@@ -51,9 +51,18 @@
             #binding-cells = <0>;
             bindings
                 = <&macro_press &kp LSHFT>
-                , <&macro_tap &kp W>
+                , <&macro_tap &kp C>
                 , <&macro_release &kp LSHFT>
-                , <&macro_tap &kp A &kp R &kp N &kp I &kp N &kp G &kp N1 &kp DLLR &kp N0>
+                , <&macro_tap &kp O &kp N &kp T &kp E &kp N &kp T &kp N1 &kp DLLR &kp N0>
+                ;
+        };
+
+        Pass_Safe: Pass_Safe {
+            label = "Pass_Safe";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp CAPS &kp T &kp CAPS &kp I &kp M &kp CAPS &kp W &kp CAPS &kp P &kp A &kp S &kp N &kp B&kp CAPS &kp S &kp CAPS &kp EXCL &kp N1 &kp N0 &kp N3 &kp N1>
                 ;
         };
 
@@ -143,7 +152,7 @@
                         bindings = <
    &bt BT_CLR  &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4           &kp CAPS     &none  &none  &none  &none &kp PSCRN
    &none       &none        &none        &none        &none        &EASOP_Cmnt            &kp KP_NLCK  &none  &none  &none  &none &kp K_CALC
-   &Login_Pass &none        &none        &none        &none        &none                  &none        &none  &none  &none  &none &trans
+   &Login_Pass &Pass_Safe   &none        &none        &none        &none                  &none        &none  &none  &none  &none &trans
                           	        &trans       &trans       &trans                 &trans  &trans   &trans
                         >;
                 };
